@@ -5,6 +5,13 @@ import Button from "./Button";
 export default {
   title: "Form/Button",
   component: Button,
+  decorators:[
+    (Story) => (
+      <div style={{ backgroundColor:"black" }}>
+        <Story />
+      </div>
+    )
+  ]
 };
 
 export const Primary = () => <Button variant="primary">Primary</Button>;
@@ -23,6 +30,14 @@ PrimaryArgs.args = {
   variant: "primary",
   children: "Primary Args",
 };
+
+PrimaryArgs.decorators = [
+  (Story) => (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Story />
+    </div>
+  ),
+];
 
 export const SecondaryArgs = Template.bind({});
 
