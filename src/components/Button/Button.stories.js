@@ -1,4 +1,5 @@
 import React from "react";
+import { action } from '@storybook/addon-actions';
 
 import Button from "./Button";
 
@@ -8,7 +9,7 @@ export default {
   decorators: [
     (Story) => (
       <div style={{ backgroundColor: "black" }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -29,12 +30,13 @@ export const PrimaryArgs = Template.bind({});
 PrimaryArgs.args = {
   variant: "primary",
   children: "Primary Args",
+  onClick: ()=>{console.log("clickeddd")}
 };
 
 PrimaryArgs.decorators = [
   (Story) => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Story />
+      {Story()}
     </div>
   ),
 ];
