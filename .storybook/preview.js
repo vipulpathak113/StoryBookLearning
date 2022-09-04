@@ -1,5 +1,6 @@
 import React from "react"
 import '@storybook/addon-console'
+import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport"
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,8 +9,11 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-    expanded: true
+    expanded: true,
   },
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  }
 }
 
 export const decorators = [

@@ -30,7 +30,8 @@ export const PrimaryArgs = Template.bind({});
 PrimaryArgs.args = {
   variant: "primary",
   children: "Primary Args",
-  onClick: ()=>{console.log("clickeddd")}
+  onClick: ()=>{console.log("clickeddd")},
+  // disabled: true
 };
 
 PrimaryArgs.decorators = [
@@ -63,7 +64,7 @@ PrimaryLong.args = {
   rotationAxis: "y",
 };
 
-PrimaryArgs.parameters = { controls: { sort: "requiredFirst" } };
+PrimaryLong.parameters = { controls: { sort: "requiredFirst" } };
 
 PrimaryLong.argTypes = {
   canRotate: {
